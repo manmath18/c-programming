@@ -71,3 +71,21 @@ void main()
      ptr2++;
      printf("value of a is %u \n",ptr2);
      }
+     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+     arrays in pointers:
+     #include<stdio.h>
+void main()
+{
+    int marks[5];
+    int *ptr=&marks[0];
+    for(int i=0;i<5;i++)
+    {
+        printf("marks of %dth student : \n",i+1);
+        scanf("%d",ptr);
+        ptr++;
+    }
+    for(int i=0;i<5;i++)
+    {
+       printf("marks of %dth student : %d \n", i+1,marks[i]);
+    }
+}
