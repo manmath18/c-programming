@@ -103,3 +103,29 @@ int main()
     printarray(marks,7);
     return 0;
 }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+multidim array:
+#include<stdio.h>
+
+int main()
+{  
+    int n_students=5;
+    int n_subjects=3;
+    int marks[5][3];
+    for(int i=0;i<n_students;i++)
+    {
+        for(int j=0;j<n_subjects;j++){
+        printf("enter marks of student %d is %d :\n",i+1,j+1);
+        scanf("%d",&marks[i][j]);
+    }
+    }
+        for(int i=0;i<n_students;i++)
+    {
+        for(int j=0;j<n_subjects;j++){
+    
+        printf(" marks of student %d is %d : %d\n",i+1,j+1,marks[i][j]);
+       
+    }
+    }
+    return 0;
+}
