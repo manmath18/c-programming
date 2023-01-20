@@ -37,3 +37,18 @@ return 0;
 
 
 }
+********************************************************************************************************************************************************************
+initialization of array:
+#include<stdio.h>
+int main()
+{
+    int marks[]={45,67,89,67};
+    printf("marks [0] is %d \n",marks[0]);
+    printf("marks [1] is %d \n",marks[1]);
+    printf("marks [2] is %d \n",marks[2]);
+    printf("marks [3] is %d \n",marks[3]);
+     return 0; 
+
+
+
+}
