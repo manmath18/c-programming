@@ -32,6 +32,8 @@ int main()
   
 
 printf("you have entered marks as %d ,%d,%d and %d",marks[0],marks[1],marks[2],marks[3]);
+
+
 return 0;
 
 
@@ -52,3 +54,20 @@ int main()
 
 
 }
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+pointer arithmetic:
+#include<stdio.h>
+void main()
+{
+    int i=56;
+    int *ptr1 = &i ;
+    printf("value of i is %u \n",ptr1);
+    ptr1++;
+     printf("value of i is %u \n",ptr1);
+    
+     char a=78;
+     char ptr2=&a;
+     printf("value of a is %u \n",ptr2);
+     ptr2++;
+     printf("value of a is %u \n",ptr2);
+     }
