@@ -187,3 +187,21 @@ int main()
     }
     printf("no. of positive integers is %d \n",p);
 }
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%^%%
+strings in c:
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char s1[45],count;
+    printf("enter name : ");
+    scanf("%s",s1);
+    puts(s1);
+    count=strlen(s1);
+    printf("%d \n",count);
+
+    return 0;
+}
+###################################################################################################################################33
+
