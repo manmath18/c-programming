@@ -240,3 +240,23 @@ int main()
     return 0;
 }
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char s1[8]="Manmath";
+    char s2[9]="Manmath";
+    int val;
+    val=strcmp(s1,s2);
+    if(val==0){
+        printf("Same \n");
+        
+    }
+    else{
+        printf("Not same \n");
+    }
+    return 0;
+        
+    
+}
