@@ -307,3 +307,441 @@ printf("%s",s1);
         
     
 }
+#############################################################################################################################################
+#include <iostream>
+#include <bits/stdc++.h>
+#include <array>
+using namespace std;
+int main()
+{
+    cout << "Hello world" << endl;
+    array<int, 5> arr = {3, 4, 5, 5, 6};
+    for (auto it : arr)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+    cout << arr.size() << endl;
+    cout << arr.front() << endl;
+    cout << arr.back() << endl;
+    cout << arr.at(2) << endl;
+    string s = "nkjgdiugvbkj";
+    for (auto c : s)
+    {
+        cout << c;
+    }
+    cout << endl;
+    vector<int> a;
+    cout << a.size() << endl;
+    a.push_back(2);
+    a.push_back(3);
+    cout << a.size() << endl;
+    for (int i = 0; i < a.size(); i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    vector<int> vec1(5, 10);
+    for (int i = 0; i < vec1.size(); i++)
+    {
+        cout << vec1[i] << " ";
+    }
+    cout << endl;
+    vector<int> vec2(vec1.begin(), vec1.begin() + 3);
+    for (int i = 0; i < vec2.size(); i++)
+    {
+        cout << vec2[i] << " ";
+    }
+    vec1.clear();
+    vec1.push_back(2);
+    for (int i = 0; i < vec1.size(); i++)
+    {
+        cout << vec1[i] << " ";
+    }
+    vector<vector<int>> vec;
+    vector<int> r1;
+    r1.push_back(1);
+    r1.push_back(2);
+    r1.push_back(3);
+    vector<int> r2;
+    r2.push_back(10);
+    r2.push_back(20);
+
+    vec.push_back(r1);
+    vec.push_back(r2);
+
+    for (auto vctr : vec)
+    {
+        for (auto it : vctr)
+        {
+            cout << it << " ";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < vec.size(); i++)
+    {
+        for (int j = 0; j < vec[i].size(); j++)
+        {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+    define 10*20 vector
+    vector<vector<int>> vec(10, vector<int>(20, 0));
+    for (int i = 0; i < vec.size(); i++)
+    {
+        for (int j = 0; j < vec[i].size(); j++)
+        {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+    // storing array in vector
+    vector<int> arr[4];
+    3d vectors
+    10*20*30
+    vector<vector<vector<int>>> vec(10, vector<vector<int>>(20, vector<int>(30, 0)));
+
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+BOOK ALLOCATION
+
+#include <iostream>
+
+using namespace std;
+bool ispossible(int a[],int n,int m,int mid){
+    int  sc=1;
+    int pgsum=0;
+    for(int i=0;i<n;i++){
+        if(pgsum+ a[i]<=mid){
+            pgsum+=a[i];
+        }
+        else{
+            sc++;
+            if(sc>m || a[i]>mid){
+                return false;
+            }
+            pgsum=a[i];
+        }
+    }
+    return true;
+}
+
+int bookacc(int a[],int n,int m){
+    int s=0,sum=0;
+    for(int i=0;i<n;i++){
+        sum=sum+a[i];
+    }
+    int e=sum,ans=-1;
+    int mid=s+(e-s)/2;
+    while(s<=e){
+        if(ispossible(a,4,2,mid)){
+            ans=mid;
+            e=mid-1;
+        }
+        else {
+            s=mid+1;
+        }
+        mid=s+(e-s)/2;
+    }
+return ans; 
+}
+int main()
+{
+    int s=0;
+    int sum=0;
+    int a[4]={10,20,30,40};
+    int t=bookacc(a,4,2);
+    cout<<t<<endl;
+    return 0;
+}
+#############################################################################################################################################################
+//selection sorting
+
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    //selection sorting
+    int n=9;
+    int a[9]={29,72,98,13,87,66,52,51,36};
+    for(int i=0;i<n-1;i++){
+        int min=i;
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[min])
+            min=j;
+        }
+        swap(a[min],a[i]);
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//bubble sorting
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    //bubble sorting
+    int n=7;
+    int a[7]={10,34,2,67,22,5,56};
+    for(int i=0;i<n-1;i++){
+        int min=i;
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[i])
+            swap(a[j],a[i]);
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
+//another way
+
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    //bubble sorting
+    int n=7;
+    int a[7]={10,34,2,67,22,5,56};
+    for(int i=1;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            if(a[j]>a[j+1])
+            swap(a[j],a[j+1]);
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
+//optimised way with time complexity of O(n)
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    //bubble sorting by optimised way
+    int n=7;
+    int a[7]={10,34,2,67,22,5,56};
+    for(int i=1;i<n;i++){
+        bool swapped=false;
+        for(int j=0;j<n-i;j++){
+            if(a[j]>a[j+1])
+            swap(a[j],a[j+1]);
+            swapped=true;
+        }
+        if(swapped==false){
+            break;
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+    return 0;
+}
+#################################################################################################
+//insertion sorting
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n=6;
+   int a[6]={7,64,45,23,2,43};
+   for(int i=1;i<n;i++){
+       int temp=a[i];
+       int j=i-1;
+       for(;j>=0;j--){
+           if(a[j]>temp){
+               a[j+1]=a[j];
+           }
+           else{
+               break;
+           }
+       }
+       a[j+1]=temp;
+   }
+   for(int i=0;i<n;i++){
+       cout<<a[i]<<" ";
+   }
+    return 0;
+}
+#######################################################################################################################################################################
+//reverse array after index m
+#include<iostream>
+#include<algorithm>
+#include<array>
+using namespace std;
+void reverse(int a[],int n,int m){
+    int s=m-1,e=n-1;
+    while(s<=e){
+       swap(a[s],a[e]);
+       s++;
+       e--;
+    }
+}
+void print(int a[],int n){
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<" ";
+    }
+}
+int main()
+{
+    int a[7]={2,4,5,6,7,8,9};
+    reverse(a,7,4);
+    print(a,7);
+
+    return 0;
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//merge two sorted arrays
+#include<iostream>
+#include<algorithm>
+#include<array>
+using namespace std;
+void merge(int a1[],int n,int a2[],int m,int a3[],int x){
+    int i=0,j=0,k=0;
+    while(i<n && j<m){
+      if(a1[i]<a2[j]){
+          a3[k++]=a1[i++];
+      } 
+      else{
+          a3[k++]=a2[j++];
+      }
+    }
+    while(i<n){
+        a3[k++]=a1[i++];
+    }
+    while(j<m){
+        a3[k++]=a2[j++];
+    }
+}
+void print(int a3[],int n){
+    for(int i=0;i<n;i++){
+        cout<<a3[i]<<" ";
+    }
+}
+int main()
+{
+    int a1[7]={2,4,5,6,7,8,9};
+    int a2[4]={1,3,10,11};
+    int a3[11];
+    merge(a1,7,a2,4,a3,11);
+    print(a3,11);
+
+    return 0;
+}
+########################################################################################################################################################
+//move zeroes in array
+#include<iostream>
+#include<algorithm>
+#include<array>
+using namespace std;
+void zero(int a1[],int n){
+   int i=0;
+   for(int j=0;j<n;j++){
+       if(a1[j]!=0){
+           swap(a1[j],a1[i]);
+           i++;
+       }
+   }
+}
+void print(int a1[],int n){
+    for(int i=0;i<n;i++){
+        cout<<a1[i]<<" ";
+    }
+}
+int main()
+{
+    int a1[9]={0,2,3,45,0,0,3,2,4};
+    zero(a1,9);
+    print(a1,9);
+   
+    return 0;
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//rotating arrays using vectors
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+     vector<int> v{2,3,4,5,5,6,6};
+      for(int i=0;i<4;i++){
+          v.push_back(v.front());
+      v.erase(v.begin());
+      }
+         for(int it:v){
+     cout<<it<<" ";
+     }
+    return 0;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//rotating array using array method
+#include <iostream>
+#include<array>
+using namespace std;
+int main()
+{
+     int v[7]={2,3,4,5,5,6,6};
+     int k=4;
+     int a[7];
+      for(int i=0;i<7;i++){
+        a[(i+k)%7]=v[i];
+      }
+         for(int it:a){
+     cout<<it<<" ";
+     }
+     cout<<endl;
+     
+    return 0;
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//adding arrays
+#include <iostream>
+#include<array>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main()
+{
+     int v[4]={2,3,4,5};
+     int x[3]={4,5,6};
+     int num1=0,num2=0;
+     for(int i=0;i<4;i++){
+         num1=(num1*10)+v[i];
+     }
+     cout<<num1<<endl;
+     for(int j=0;j<3;j++){
+         num2=(num2*10)+x[j];
+     }
+     cout<<num2<<endl;
+    int m=num1+num2;
+    cout<<m<<endl;
+    vector<int> a;
+    while(m!=0){
+       a.push_back(m%10);
+       m=m/10;
+    }
+    reverse(a.begin(),a.end());
+    for(int it:a){
+        cout<<it<<" ";
+    }
+    cout<<endl;
+    return 0;
+}
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
